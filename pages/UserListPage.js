@@ -49,7 +49,7 @@ useEffect(() => {
 
 const fetchUsers = () => {
   axios
-    .get("http://127.0.0.1:8000/registration/api/users/")
+    .get("https://peitelbackend.onrender.com/registration/api/users/")
     .then((res) => {
       setUsers(res.data);
       setLoading(false);
@@ -71,7 +71,7 @@ const fetchUsers = () => {
           style: "destructive",
           onPress: () => {
             axios
-              .delete(`http://127.0.0.1:8000/registration/api/users/${id}/`)
+              .delete(`https://peitelbackend.onrender.com/registration/api/users/${id}/`)
               .then(() => {
                 Alert.alert("Success", "User deleted successfully");
                 fetchUsers(); // refresh list

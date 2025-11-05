@@ -33,7 +33,7 @@ export default function Page2({ route, navigation }) {
   const handleSubmit = async () => {
     try {
       const response = await axios.post(
-        "http://127.0.0.1:8000/registration/api/register/",
+        'https://peitelbackend.onrender.com/registration/api/register/',
         formData
       );
       Alert.alert("Success", "User registered successfully!");
